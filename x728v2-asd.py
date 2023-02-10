@@ -57,5 +57,3 @@ while True:
          GPIO.output(GPIO_PORT, GPIO.LOW)
 
  time.sleep(2)
-
-
