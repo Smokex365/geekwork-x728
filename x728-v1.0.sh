@@ -81,12 +81,13 @@ sudo echo "alias x728off='sudo x728softsd.sh'" >> $HOME/.bashrc
 #X728 Battery voltage & precentage reading
 #!/bin/bash
 
+
 #Get current PYTHON verson, 2 or 3
-PY_VERSION=`python -V 2>&1|awk '{print $2}'|awk -F '.' '{print $1}'`
+PY_VERSION=`python3 -V 2>&1|awk '{print $2}'|awk -F '.' '{print $1}'`
 
 #sudo sed -e '/shutdown/ s/^#*/#/' -i /etc/rc.local
 
-echo '#!/usr/bin/env python
+echo '#!/usr/bin/env python3
 import struct
 import smbus
 import sys
@@ -171,7 +172,7 @@ sudo chmod +x $HOME/x728bat.py
 
 sudo sed -e '/button/ s/^#*/#/' -i /etc/rc.local
 
-echo '#!/usr/bin/env python
+echo '#!/usr/bin/env python3
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
