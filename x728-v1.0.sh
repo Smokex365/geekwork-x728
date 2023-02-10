@@ -87,7 +87,7 @@ PY_VERSION=`python3 -V 2>&1|awk '{print $2}'|awk -F '.' '{print $1}'`
 
 #sudo sed -e '/shutdown/ s/^#*/#/' -i /etc/rc.local
 
-echo '#!/usr/bin/env python3
+echo '#!/usr/bin/env python
 import struct
 import smbus
 import sys
@@ -172,7 +172,7 @@ sudo chmod +x $HOME/x728bat.py
 
 sudo sed -e '/button/ s/^#*/#/' -i /etc/rc.local
 
-echo '#!/usr/bin/env python3
+echo '#!/usr/bin/env python
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
