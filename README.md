@@ -22,7 +22,9 @@ sudo apt-get -y install i2c-tools python3-smbus python-smbus
 2.1 Once you have logged into your Raspberry Pi from the command line, run the command to see all the connected devices
 
 sudo i2cdetect -y 1
-X728x-i2c.png
+
+![i2c](https://wiki.geekworm.com/images/b/b9/X728x-i2c.png)
+
 #36 - the address of the battery fuel gauging chip
 #68 - the address of the RTC chip
 #Different x728 versions may have different values
