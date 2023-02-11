@@ -4,30 +4,36 @@ Will look into switching from rc.local to systemd at a later time.
 
 User guide: https://wiki.geekworm.com/X728-Software
 
-X728-Software
-Jump to navigationJump to search
-
-The following test is base on 2022-01-28-raspios-bullseye-armhf.zip
-
+**X728-Software**
 Python version is 3;
-
 1. Enable I2C funcion on Raspbian:
-
-reter to How to enable I2C
+  reter to How to enable I2C
 2. Login via teminal window, then update & upgrade & install necessary software (python and i2c tool library)
-
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get -y install i2c-tools python3-smbus python-smbus
+```
+  sudo apt-get update
+  sudo apt-get upgrade
+  sudo apt-get -y install i2c-tools python3-smbus python-smbus
+```
 2.1 Once you have logged into your Raspberry Pi from the command line, run the command to see all the connected devices
 
 sudo i2cdetect -y 1
-
-![i2c](https://wiki.geekworm.com/images/b/b9/X728x-i2c.png)
-
+```
+pi@rpi:~$ sudo i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- 36 -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+```
 #36 - the address of the battery fuel gauging chip
 #68 - the address of the RTC chip
+
 #Different x728 versions may have different values
+
 3. Download x728 setup scripts:
 
 cd ~
